@@ -28,7 +28,7 @@ class MealDetailScreen extends StatelessWidget {
       margin: EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: Colors.white.withOpacity(0.5),
-        border: Border.all(color: Colors.green),
+        border: Border.all(color: const Color.fromARGB(255, 122, 0, 6)),
         borderRadius: BorderRadius.circular(10),
       ),
       child: child
@@ -41,7 +41,7 @@ class MealDetailScreen extends StatelessWidget {
     
     return Scaffold(
       appBar: AppBar(
-        title: Text(meal?.title ?? 'Detalhes da Refeição'),
+        title: Text(meal?.title ?? 'Detalhes da Refeição', style: TextStyle(color: Colors.white)),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -60,7 +60,7 @@ class MealDetailScreen extends StatelessWidget {
                 itemCount: meal.ingredients.length,
                 itemBuilder: (ctx, index) {
                   return Card(//card dos ingredientes
-                    color: const Color.fromARGB(255, 88, 240, 93),//card dos ingredientes
+                    color: Color.fromARGB(255, 211, 211, 211),//card dos ingredientes
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                         vertical: 5,
@@ -81,7 +81,7 @@ class MealDetailScreen extends StatelessWidget {
                     children: <Widget>[
                       ListTile(
                         leading: CircleAvatar(
-                          backgroundColor: Colors.green,
+                          backgroundColor: Colors.grey,
                           child: 
                           Text('${index + 1}'),
                         ),
@@ -97,7 +97,7 @@ class MealDetailScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Color.fromARGB(255, 88, 240, 93),
+        backgroundColor: Color.fromARGB(255, 211, 211, 211),
         child: Icon(isFavorite(meal) ? Icons.favorite : Icons.favorite_border),
         onPressed: () {
           onToggleFavorite(meal);

@@ -68,12 +68,13 @@ class _MyAppState extends State<MyApp> {
           fontFamily: 'Raleway',
           scaffoldBackgroundColor: Color.fromRGBO(255, 254, 229, 1),
           appBarTheme: AppBarTheme(
-            color: const Color.fromARGB(255, 88, 240, 93),
+            color: Color.fromARGB(255, 122, 0, 6),
           ),
           textTheme: ThemeData.light().textTheme.copyWith(
             titleLarge: const TextStyle(
               fontSize: 20,
               fontFamily: 'RobotoCondensed',
+              color: Colors.white
             ),
           ),
         ),
@@ -87,6 +88,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
-
-

@@ -49,10 +49,10 @@ class _TabsScreenState extends State<TabsScreen> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.restaurant_menu),
+            Icon(Icons.restaurant_menu, color: Colors.white,),
             SizedBox(width: 10),
             if (selectedTitle != null)
-              Text(selectedTitle)
+              Text(selectedTitle, style: TextStyle(color: Colors.white))
             else
               Text('Hora de rangar!'),
           ],
@@ -62,19 +62,19 @@ class _TabsScreenState extends State<TabsScreen> {
       body: _screens[_selectedScreenIndex]['screen'] as Widget,
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectScreen,
-        backgroundColor: const Color.fromARGB(255, 88, 240, 93),
+        backgroundColor: Color.fromARGB(255, 122, 0, 6),
         unselectedItemColor: Colors.white,
-        selectedItemColor: Colors.black,
+        selectedItemColor: Colors.white70,
         currentIndex: _selectedScreenIndex,
         type: BottomNavigationBarType.shifting,
         items: const [
           BottomNavigationBarItem(
-            backgroundColor: Color.fromARGB(255, 88, 240, 93),
+            backgroundColor: Color.fromARGB(255, 122, 0, 6),
             icon: Icon(Icons.home),
             label: 'Categorias',
           ),
           BottomNavigationBarItem(
-            backgroundColor: Color.fromARGB(255, 88, 240, 93),
+            backgroundColor: Color.fromARGB(255, 122, 0, 6),
             icon: Icon(Icons.favorite),
             label: 'Favoritos',
           ),
